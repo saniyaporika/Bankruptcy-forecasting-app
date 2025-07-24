@@ -1,9 +1,10 @@
 services:
   - type: web
-    name: bankruptcy-forecasting-app
+    name: bankruptcy-flask-app
     env: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: ""
     startCommand: python app.py
+    plan: free
     envVars:
-      - key: PYTHON_VERSION
-        value: 3.10.13
+      - key: FLASK_ENV
+        value: production
