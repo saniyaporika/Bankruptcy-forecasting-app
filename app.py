@@ -11,7 +11,9 @@ import joblib
 # ✅ Load models and scaler
 xgb_model = joblib.load("xgb_model.pkl")
 scaler = joblib.load("scaler.pkl")
-ann_model = load_model("ann_model.keras")
+import os
+ann_model = load_model(os.path.join(os.path.dirname(__file__), "ann_model.keras"))
+
 
 
 @app.route('/')
